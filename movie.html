@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie selections</title>
+        <link rel="stylesheet" type="text/css" href="newStyle1.css">
+        <script type="text/javascript" src="script.js"></script>
+        <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> -->
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap theme -->
+        <link href="bootstrap-3.3.7/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="indexV3.html">Movie Fun</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="indexV3.html">Home</a>
+                        </li>
+                        <li class="active">
+                            <a href="movie.html">Buy Movie</a>
+                        </li>
+                        <li>
+                            <a href="#">Location</a>
+                        </li>
+                        <li>
+                            <a href="#">Show Times</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--<li class="dropdown">-->
+        <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"-->
+        <!-- aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
+        <!-- <ul class="dropdown-menu">-->
+        <!-- <li>-->
+        <!-- <a href="#">Action</a>-->
+        <!-- </li>-->
+        <!-- <li>-->
+        <!-- <a href="#">Another action</a>-->
+        <!-- </li>-->
+        <!-- <li>-->
+        <!-- <a href="#">Something else here</a>-->
+        <!-- </li>-->
+        <!-- <li role="separator" class="divider"></li>-->
+        <!-- <li class="dropdown-header">Nav header</li>-->
+        <!-- <li>-->
+        <!-- <a href="#">Separated link</a>-->
+        <!-- </li>-->
+        <!-- <li>-->
+        <!-- <a href="#">One more separated link</a>-->
+        <!-- </li>-->
+        <!-- </ul>-->
+        <!--</li>-->
+        <a href="indexV3.html"><button type="button" class="btn btn-lg btn-danger">Go Back</button></a>
+        <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+            <button type="button" class="btn btn-secondary">Out Now</button>
+            <button type="button" class="btn btn-secondary">Release Soon</button>
+            <button type="button" class="btn btn-secondary">Popular Movies</button>
+        </div>
+<!-- Example single danger button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+        <!--<div class="btn-group" role="group">-->
+        <!-- <button id="btnGroupDrop1" type="button" class="btn btn-secondary
+        dropdown-toggle"-->
+        <!-- data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>-->
+        <!-- <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">-->
+        <!-- <a class="dropdown-item" href="#">Dropdown link</a>-->
+        <!-- <a class="dropdown-item" href="#">Dropdown link</a>-->
+        <!-- </div>-->
+        <!--</div>-->
+        <div class="movies-display" id="movies-display">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="hovereffect">
+                        <img class="img-responsive" src="images/PosterWonderWoman.jpg"  width="222" height="357" alt="">
+                        <div class="overlay">
+                            <h2>Rating: ⭐️⭐️⭐️⭐️</h2>
+                            <a class="info" href="#">Detail</a>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-lg btn-success">BUY</button>
+                </div>
+                 <div class="col-sm-3">
+                    <div class="hovereffect">
+                        <img class="img-responsive" src="images/PosterGhostInTheShell.jpg" width="222" height="357" alt="">
+                        <div class="overlay">
+                            <h2>Rating: ⭐️⭐️⭐️⭐️</h2>
+                            <a class="info" href="#">Detail</a>
+                        </div>
+                    </div>
+                    <!--<a class="p1" href="#"><img src = "images/PosterWonderWoman.jpg" width = "222" height="357"/></a>-->
+                    <button type="button" class="btn btn-lg btn-success">BUY</button>
+                </div>
+
+                <div class="col-sm-3">
+                     <div class="hovereffect">
+                        <img class="img-responsive" src="images/PosterArrow.jpg" width="222" height="357" alt="">
+                        <div class="overlay">
+                            <h2>Rating: ⭐️⭐️⭐️⭐️</h2>
+                            <a class="info" href="#">Detail</a>
+                        </div>
+                    </div>
+                    <!--<a class="p1" href="#"><img src = "images/PosterHacksawRidge.jpg" width = "222" height="357"/></a>-->
+                    <button type="button" class="btn btn-lg btn-success">BUY</button>
+                </div>
+                <div class="col-sm-3">
+                    <div class="hovereffect">
+                        <img class="img-responsive" src="images/PosterTheMagnificientSeven.jpg" width="222" height="357" alt="">
+                        <div class="overlay">
+                            <h2>Rating: ⭐️⭐️⭐️⭐️</h2>
+                            <a class="info" href="#">Detail</a>
+                        </div>
+                    </div>
+                    <!--<a class="p1" href="#"><img src = "images/PosterTheMagnificientSeven.jpg" width = "222" height="357"/></a>-->
+                    <button type="button" class="btn btn-lg btn-success">BUY</button>
+                </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="hovereffect">
+                        <img class="img-responsive" src="images/PosterTrolls.jpg" width="222" height="357" alt="">
+                        <div class="overlay">
+                            <h2>Rating: ⭐️⭐️⭐️⭐️</h2>
+                            <a class="info" href="#">Detail</a>
+                        </div>
+                    </div>
+                    <!--<a class="p1" href="#"><img src = "images/PosterTrolls.jpg" width = "222" height="357"/></a>-->
+                    <button type="button" class="btn btn-lg btn-success">BUY</button>
+                </div>
+                <div class="col-sm-3">
+                     <div class="hovereffect">
+                        <img class="img-responsive" src="images/PosterBeautyAndTheBeast.jpg" width="222" height="357" alt="">
+                        <div class="overlay">
+                            <h2>Rating: ⭐️⭐️⭐️⭐️</h2>
+                            <a class="info" href="#">Detail</a>
+                        </div>
+                    </div>
+                    <!--<a class="p1" href="#"><img src = "images/PosterBeautyAndTheBeast.jpg" width = "222" height="357"/></a>-->
+                    <button type="button" class="btn btn-lg btn-success">BUY</button>
+                </div>
+                <div class="col-sm-3">
+                    <div class="hovereffect">
+                        <img class="img-responsive" src="images/PosterHarryPotter.jpg" width="222" height="357" alt="">
+                        <div class="overlay">
+                            <h2>Rating: ⭐️⭐️⭐️⭐️</h2>
+                            <a class="info" href="#">Detail</a>
+                        </div>
+                    </div>
+                    <!--<a class="p1" href="#"><img src = "images/PosterHarryPotter.jpg" width = "222" height="357"/></a>-->
+                    <button type="button" class="btn btn-lg btn-success">BUY</button>
+                </div>
+                <div class="col-sm-3">
+                    <div class="hovereffect">
+                        <img class="img-responsive" src="images/PosterMifune.jpg" width="222" height="357" alt="">
+                        <div class="overlay">
+                            <h2>Rating: ⭐️⭐️⭐️⭐️</h2>
+                            <a class="info" href="#">Detail</a>
+                        </div>
+                    </div>
+                    <!--<a class="p1" href="#"><img src = "images/PosterMifune.jpg" width = "222" height="357"/></a>-->
+                    <button type="button" class="btn btn-lg btn-success">BUY</button>
+                </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="hovereffect">
+                        <img class="img-responsive" src="images/PosterMoana.jpg" width="222" height="357" alt="">
+                        <div class="overlay">
+                            <h2>Rating: ⭐️⭐️⭐️⭐️</h2>
+                            <a class="info" href="#">Detail</a>
+                        </div>
+                    </div>
+                    <!--<a class="p1" href="#"><img src = "images/PosterMoana.jpg" width = "222" height="357"/></a>-->
+                    <button type="button" class="btn btn-lg btn-success">BUY</button>
+                </div>
+                <div class="col-sm-3">
+                    <div class="hovereffect">
+                        <img class="img-responsive" src="images/PosterOuija.jpg" width="222" height="357" alt="">
+                        <div class="overlay">
+                            <h2>Rating: ⭐️⭐️⭐️⭐️</h2>
+                            <a class="info" href="#">Detail</a>
+                        </div>
+                    </div>
+                    <!--<a class="p1" href="#"><img src = "images/PosterOuija.jpg" width = "222" height="357"/></a>-->
+                    <button type="button" class="btn btn-lg btn-success">BUY</button>
+                </div>
+                <div class="col-sm-3">
+                    <div class="hovereffect">
+                        <img class="img-responsive" src="images/PosterTheDarkKnight.jpg" width="222" height="357" alt="">
+                        <div class="overlay">
+                            <h2>Rating: ⭐️⭐️⭐️⭐️</h2>
+                            <a class="info" href="#">Detail</a>
+                        </div>
+                    </div>
+                    <!--<a class="p1" href="#"><img src = "images/PosterTeenWolf.jpg" width = "222" height="357"/></a>-->
+                    <button type="button" class="btn btn-lg btn-success">BUY</button>
+                </div>
+               <div class="col-sm-3">
+                    <div class="hovereffect">
+                        <img class="img-responsive" src="images/PosterDoctorStrange.jpg" width="222"
+                        height="357" alt="">
+                        <div class="overlay">
+                            <h2>Rating: ⭐️⭐️⭐️⭐️</h2>
+                            <a class="info" href="#">Detail</a>
+                        </div>
+                    </div>
+                    <!--<a class="p1" href="#"><img src = "images/PosterDoctorStrange.jpg" width = "222" height="357"/></a>-->
+                    <button type="button" class="btn btn-lg btn-success">BUY</button>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
