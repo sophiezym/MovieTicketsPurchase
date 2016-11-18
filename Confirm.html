@@ -7,27 +7,68 @@
         <title>Confirmation Page</title>
         <link rel="stylesheet" type="text/css" href="confirmCSS.css">
         <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7/dist/css/bootstrap.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
     </head>
     
     <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="indexV3.html">Freeze Frame</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="indexV3.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="movie.html">Buy Movie</a>
+                        </li>
+                        <li>
+                            <a href="#">Location</a>
+                        </li>
+                        <li>
+                            <a href="#">Show Times</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <div class="logo" id="logo">
             <a href="Confirm.html"><img src="imgs/Movie logo.jpg" width="254" height="211" ></a>
         </div>
         <div class="confirmInfo" id="confirmInfo">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-4">
                     <h1 class="MovieLocation" id="MovieLocation">Movie Location:
                         <br />
                     </h1>
                     <h1 class="TheatreNm" id="TheatreNm">Sunny Theatre</h1>
-                    <p>99 University Crescent <br> Phone Number: 204-968-5252</p>
+                    <p>99 University Crescent
+                        <br>Phone Number: 204-968-5252</p>
                 </div>
                 <div class="col-sm-6">
                     <a class="p2" href="#"><img src = "imgs/map.png" width = "498" height="357"/></a>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-3">
                     <h1 class="type" id="type">Ticket Type</h1>
                     <p class="typeSelection" id="typeSelection">Children (3-13)
                         <br />Senior (65+)
@@ -55,48 +96,96 @@
             <div class="payment" id="payment">
                 <h1>PaymentMethod</h1>
                 <br />
-                <input type="radio" name="method" value="Master">VISA
-                <br>
-                <input type="radio" name="method" value="Master">Master
-                <br>
-                <input type="radio" name="method" value="Cash">Cash</div>
-                <div class="row">
-                <div class="col-sm-6">
-                  <h1>Email:</h1>
-                <input type="text" name="email">
-                <br>
-                <h1>Retype Email</h1>
-                <input type="text" name="email">
-                <br>
-                <br>       
-                </div>
-                <div class="col-sm-6">
-                    <h1>Total Item: 3
-                    <br>Total Cost: $ 25.00
+                <!--<input type="radio" name="method" value="Master">VISA-->
+                <div class="container">
+                    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">VISA</button>
+                    <div id="demo" class="collapse">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">VISA card Number</span>
+                            <input type="text" class="form-control" placeholder=""
+                            aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">Name of Card Holder</span>
+                            <input type="text" class="form-control" placeholder=""
+                            aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">Billing Address</span>
+                            <input type="text" class="form-control" placeholder=""
+                            aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">Expiry Date</span>
+                            <input type="text" class="form-control" placeholder=""
+                            aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">Master</button>
+                    
+                    <div id="demo2" class="collapse">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">Master card Number</span>
+                            <input type="text" class="form-control" placeholder=""
+                            aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">Name of Card Holder</span>
+                            <input type="text" class="form-control" placeholder=""
+                            aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">Billing Address</span>
+                            <input type="text" class="form-control" placeholder=""
+                            aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">Expiry Date</span>
+                            <input type="text" class="form-control" placeholder=""
+                            aria-describedby="basic-addon1">
+                        </div>
+                    </div>
                     <br>
+                    <!--<input type="radio" name="method" value="Master">Master-->
                     <br>
-                </h1>
+                    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo3">Cash</button>
+                    <div id="demo3" class="collapse">You have chosen to pay by cash.
+                        <br />
+                    </div>
+                    <br />
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-addon" id="sizing-addon1">Email</span>
+                                <input type="text" class="form-control" placeholder="Email address"
+                                aria-describedby="sizing-addon1">
+                            </div>
+                            <br>
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-addon" id="sizing-addon1">Confirm Email</span>
+                                <input type="text" class="form-control" placeholder="Email address"
+                                aria-describedby="sizing-addon1">
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+                        <div class="col-sm-6">
+                            <h1>Total Item: 3
+                                <br>Total Cost: $ 25.00
+                                <br>
+                                <br>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="buttonClass" id="buttonClass">
+                        <button type="button" class="btn btn-lg btn-warning">Cancel</button>
+                        <button type="button" class="btn btn-lg btn-primary">Accpet</button>
+                    </div>
                 </div>
             </div>
-            <!--<div class="email" id="email">-->
-            <!--    <h1>Email:</h1>-->
-            <!--    <input type="text" name="email">-->
-            <!--    <br>-->
-            <!--    <h1>Retype Email</h1>-->
-            <!--    <input type="text" name="email">-->
-            <!--    <br>-->
-            <!--    <br>-->
-            <!--</div>-->
-            <!--<div class="total" id="total">-->
-            <!--    <h1>Total Item: 3-->
-            <!--        <br>Total Cost: $ 25.00-->
-            <!--        <br>-->
-            <!--        <br>-->
-            <!--    </h1>-->
-            <!--</div>-->
-            <div class="buttonClass" id="buttonClass">
-                <button type="button" class="btn btn-lg btn-primary">Cancel</button>
-                <button type="button" class="btn btn-lg btn-primary">Accpet</button>
             </div>
     </body>
 
