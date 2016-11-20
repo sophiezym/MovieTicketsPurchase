@@ -127,5 +127,5 @@ function total()
     var general = parseInt(document.getElementById('GenNo').value);
     document.getElementById('quantity').value = child+senior+general;
     var total = child*5+senior*7+general*10;
-    document.getElementById('cost').value = total
+    document.getElementById('cost').value = total;
 }
