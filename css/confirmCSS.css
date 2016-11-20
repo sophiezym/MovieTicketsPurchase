@@ -81,3 +81,8 @@ body{
 	width: 40%;
 	float: right;
 }
+.center{
+width: 150px;
+  margin: 40px auto;
+  
+}
