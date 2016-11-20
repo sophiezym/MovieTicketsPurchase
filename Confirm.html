@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +9,20 @@
         <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7/dist/css/bootstrap.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/confirmCSS.js"></script>
+        <style>
+            body {
+                background-color: Crimson;
+            }
+            .boxMain {
+                margin-top: -1%;
+                margin-left: 10%;
+                margin-right: 10%;
+                border: 3px solid DarkRed;
+                background-color: FloralWhite;
+            }
+        </style>
     </head>
-    
+
     <body>
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -49,161 +60,193 @@
                 </div>
             </div>
         </nav>
-        <div class="logo" id="logo">
-            <a href="Confirm.html"><img src="imgs/Movie logo.jpg" width="254" height="211" ></a>
-        </div>
-        <div class="confirmInfo" id="confirmInfo">
-            <div class="row">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-4">
-                    <h1 class="MovieLocation" id="MovieLocation">Movie Location:
-                        <br />
-                    </h1>
-                    <h1 class="TheatreNm" id="TheatreNm">Sunny Theatre</h1>
-                    <p>99 University Crescent
-                        <br>Phone Number: 204-968-5252</p>
-                </div>
-                <div class="col-sm-6">
-                    <a class="p2" href="#"><img src = "imgs/map.png" width = "498" height="357"/></a>
-                </div>
+        <div class="boxMain">
+            <div class="logo" id="logo">
+                <a href="Confirm.html"><img src="imgs/Movie logo.jpg" width="254" height="211" ></a>
             </div>
-            <div class="row">
-                <div class="col-sm-1"></div>
-                
-                <!--<div class="col-sm-3">-->
-                <!--    <h1 class="type" id="type">Ticket Type</h1>-->
-                <!--    <p class="typeSelection" id="typeSelection">Children (3-13)-->
-                <!--        <br />Senior (65+)-->
-                <!--        <br />General(14-64)-->
-                <!--        <br />-->
-                <!--    </p>-->
-                <!--</div>-->
-                <div class="col-sm-4">
-                    <br /><br /><br /><br /><strong>Children (3-13):</strong><br>
-                    <input type="number" id="ChildrenNo">
-                    <strong>$5.00</strong>
-                    <br /><br /><strong>Senior (65+):</strong><br>
-                    <input type="number" id="SeniorNo">
-                    <strong>$7.00</strong>
-                    <br /><br /><strong>General (14-64):</strong><br>
-                    <input type="number" id="GeneralNo">
-                    <strong>$10.00</strong>
-                    <br /><br />
-                    <button onclick="myFunction()">Summit</button><br>
-                   
-                    <script>
-                    var quantity;
-                        function myFunction() {
-                            var quantity;
-                            quantity = document.getElementById("ChildrenNo") + document.getElementById("SeniorNo") + 
-                            document.getElementById("GeneralNo");
-                            
-                        }
-                        
-                    </script>
+            <div class="confirmInfo" id="confirmInfo">
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4">
+                        <h1 class="MovieLocation" id="MovieLocation">Movie Location:
+                            <br />
+                        </h1>
+                        <h1 class="TheatreNm" id="TheatreNm">Sunny Theatre</h1>
+                        <p>99 University Crescent
+                            <br>Phone Number: 204-968-5252</p>
+                    </div>
+                    <div class="col-sm-5">
+                        <a class="p2" href="#"><img src = "imgs/map.png" width = "450" height="357"/></a>
+                    </div>
                 </div>
-                <div class="col-sm-4" onload = "myFunction();">
-                    <strong>Total Items: </strong>quantity.display;
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-1"></div>
-                <div class="col-sm-11">
-                    <div class="payment" id="payment">
-                        <h1>PaymentMethod</h1>
+                <div class="row">
+                    <div class="col-sm-1"></div>
+                    <!--<div class="col-sm-3">-->
+                    <!-- <h1 class="type" id="type">Ticket Type</h1>-->
+                    <!-- <p class="typeSelection" id="typeSelection">Children (3-13)-->
+                    <!-- <br />Senior (65+)-->
+                    <!-- <br />General(14-64)-->
+                    <!-- <br />-->
+                    <!-- </p>-->
+                    <!--</div>-->
+                    <div class="col-sm-4">
                         <br />
-                        <!--<input type="radio" name="method" value="Master">VISA-->
-                        <div class="container">
-                            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">VISA</button>
-                            <div id="demo" class="collapse">
-                                <div class="input-group">
-                                    <span class="input-group-addon" id="basic-addon1">VISA card Number</span>
-                                    <input type="text" class="form-control" placeholder=""
-                                    aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group">
-                                    <span class="input-group-addon" id="basic-addon1">Name of Card Holder</span>
-                                    <input type="text" class="form-control" placeholder=""
-                                    aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group">
-                                    <span class="input-group-addon" id="basic-addon1">Billing Address</span>
-                                    <input type="text" class="form-control" placeholder=""
-                                    aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group">
-                                    <span class="input-group-addon" id="basic-addon1">Expiry Date</span>
-                                    <input type="text" class="form-control" placeholder=""
-                                    aria-describedby="basic-addon1">
-                                </div>
-                            </div>
+                        <br />
+                        <br />
+                        <br />
+                        <label>Children (3-13):</label>
+                        <br>
+                        <button type="button" class="btn btn-warning" id="decrementC"  onclick="decrementValueC()"> - </button>
+                        <input type = "number" id="ChildNo" value="0">
+                        <button type="button" class="btn btn-primary" id="incrementC" onclick="incrementValueC()">+</button>
+                        <!-- <button onclick="buttonClick()">Click Me</button> -->
+                        <!-- <input type="text" id="ShownNo" value="0"></input> -->
+                        <strong>$5.00</strong>
+                        <br />
+                        <br />
+                        <label>Senior (65+):</label>
+                        <br>
+                        <button type="button" class="btn btn-warning" id="decrement" onclick="decrementValueS()">-</button>
+                        <input type="number" id="SeniorNo" value="0">
+                        <button type="button" class="btn btn-primary" id="increment"  onclick="incrementValueS()">+</button>
+                        <strong>$7.00</strong>
+                        <br />
+                        <br />
+                        <label>General (14-64):</label>
+                        <br>
+                        <button type="button" class="btn btn-warning" id="decrement" onclick="decrementValueG()">-</button>
+                        <input type="number" id="GenNo" value="0">
+                        <button type="button" class="btn btn-primary" id="increment" onclick="incrementValueG()">+</button>
+                        <strong>$10.00</strong>
+                        <br />
+                        <br />
+                        <button type="button" class="btn btn-info" onclick="total()">Submit</button>
+                        <br>
+                    </div>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-3" onload="total();">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <strong>Total Item(s): <input type="text" id="quantity" value="0" readonly>
+                            <br>Total Cost:  <input type="text" id = "cost" value="0" readonly></strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-11">
+                        <div class="payment" id="payment">
+                            <h1>PaymentMethod</h1>
                             <br />
-                            <br />
-                            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">Master</button>
-                            <div id="demo2" class="collapse">
-                                <div class="input-group">
-                                    <span class="input-group-addon" id="basic-addon1">Master card Number</span>
-                                    <input type="text" class="form-control" placeholder=""
-                                    aria-describedby="basic-addon1">
+                            <!--<input type="radio" name="method" value="Master">VISA-->
+                            <div class="container">
+                                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">VISA</button>
+                                <div id="demo" class="collapse">
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="sizing-addon1">VISA card Number</span>
+                                        <input>
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="sizing-addon1">Name of Card Holder</span>
+                                        <input>
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="sizing-addon1">Billing Address</span>
+                                        <br>Address Line 1:
+                                        <input>
+                                        <br>Address Line 2:
+                                        <input>
+                                        <br>City, Province:
+                                        <input>
+                                        <br>Postal Colde
+                                        <input>
+                                        <br>
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="sizing-addon1">Expiry Date</span>
+                                        <input>
+                                    </div>
                                 </div>
-                                <div class="input-group">
-                                    <span class="input-group-addon" id="basic-addon1">Name of Card Holder</span>
-                                    <input type="text" class="form-control" placeholder=""
-                                    aria-describedby="basic-addon1">
+                                <br />
+                                <br />
+                                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">Master</button>
+                                <div id="demo2" class="collapse">
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="sizing-addon1">Master card Number</span>
+                                        <input>
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="sizing-addon1">Name of Card Holder</span>
+                                        <input>
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="sizing-addon1">Billing Address</span>
+                                        <br>Address Line 1:
+                                        <input>
+                                        <br>Address Line 2:
+                                        <input>
+                                        <br>City, Province:
+                                        <input>
+                                        <br>Postal Colde
+                                        <input>
+                                        <br>
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="sizing-addon1">Expiry Date</span>
+                                        <input>
+                                    </div>
                                 </div>
-                                <div class="input-group">
-                                    <span class="input-group-addon" id="basic-addon1">Billing Address</span>
-                                    <input type="text" class="form-control" placeholder=""
-                                    aria-describedby="basic-addon1">
+                                <br>
+                                <!--<input type="radio" name="method" value="Master">Master-->
+                                <br>
+                                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo3">Cash</button>
+                                <div id="demo3" class="collapse">You have chosen to pay by cash.
+                                    <br />
                                 </div>
-                                <div class="input-group">
-                                    <span class="input-group-addon" id="basic-addon1">Expiry Date</span>
-                                    <input type="text" class="form-control" placeholder=""
-                                    aria-describedby="basic-addon1">
-                                </div>
-                            </div>
-                            <br>
-                            <!--<input type="radio" name="method" value="Master">Master-->
-                            <br>
-                            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo3">Cash</button>
-                            <div id="demo3" class="collapse">You have chosen to pay by cash.
+                                <br />
                                 <br />
                             </div>
-                            <br />
-                            <br />
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="input-group input-group-lg">
-                                    <span class="input-group-addon" id="sizing-addon1">Email</span>
-                                    <input type="text" class="form-control" placeholder="Email address"
-                                    aria-describedby="sizing-addon1">
-                                </div>
-                                <br>
-                                <div class="input-group input-group-lg">
-                                    <span class="input-group-addon" id="sizing-addon1">Confirm Email</span>
-                                    <input type="text" class="form-control" placeholder="Email address"
-                                    aria-describedby="sizing-addon1">
-                                </div>
-                                <br>
-                                <br>
-                            </div>
-                            <div class="col-sm-6">
-                                <h1>Total Item: 3
-                                    <br>Total Cost: $ 25.00
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="input-group input-group-lg">
+                                        <span class="input-group-addon" id="sizing-addon1">Email</span>
+                                        <input type="text" class="form-control" placeholder="Email address"
+                                        aria-describedby="sizing-addon1">
+                                    </div>
+                                    <br>
+                                    <div class="input-group input-group-lg">
+                                        <span class="input-group-addon" id="sizing-addon1">Confirm Email</span>
+                                        <input type="text" class="form-control" placeholder="Email address"
+                                        aria-describedby="sizing-addon1">
+                                    </div>
                                     <br>
                                     <br>
-                                </h1>
+                                </div>
+                                <!--<div class="col-sm-6">-->
+                                <!-- <h1>Total Item: 3-->
+                                <!-- <br>Total Cost: $ 25.00-->
+                                <!-- <br>-->
+                                <!-- <br>-->
+                                <!-- </h1>-->
+                                <!--</div>-->
                             </div>
-                        </div>
-                        <div class="buttonClass" id="buttonClass">
-                            <button type="button" class="btn btn-lg btn-warning">Cancel</button>
-                            <button type="button" class="btn btn-lg btn-primary">Accpet</button>
+                            <div class="buttonClass" id="buttonClass">
+                                <button type="button" class="btn btn-lg btn-warning">Cancel</button>
+                                <button type="button" class="btn btn-lg btn-primary">Accpet</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <script src="js/ConfirmJS.js"></script>
     </body>
 
 </html>
